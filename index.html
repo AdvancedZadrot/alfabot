@@ -1,5 +1,5 @@
 <?PHP
-//ôóíêöèè
+//Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¨
 
 function http($url){
 $curl = curl_init();
@@ -21,11 +21,11 @@ return iconv('cp1251','UTF-8', "$t");
 }
 
 
-//Îáğàáîò÷èê ñîîáùåíèé
+//ÃÃ¡Ã°Ã Ã¡Ã®Ã²Ã·Ã¨Ãª Ã±Ã®Ã®Ã¡Ã¹Ã¥Ã­Ã¨Ã©
 
-$get = http("https://api.telegram.org/bot484226037:AAHI3AnWGUdPX0kpUc5iSwpA5HsnB0nfw3s/getUpdates");.$l = iconv('cp1251','UTF-8', "Ïîñëåäíåå ñîîáùåíèå:");
+$get = http("https://api.telegram.org/bot484226037:AAHI3AnWGUdPX0kpUc5iSwpA5HsnB0nfw3s/getUpdates");.$l = iconv('cp1251','UTF-8', "ÃÃ®Ã±Ã«Ã¥Ã¤Ã­Ã¥Ã¥ Ã±Ã®Ã®Ã¡Ã¹Ã¥Ã­Ã¨Ã¥:");
 //echo "$l <b>".$get[result][count($get[result])-1][message][text]."</b> writed by <b>".$get[result][count($get[result])-1][message][chat][username];
-//if (preg_match('/Ïğèâ/', iconv('UTF-8', 'cp1251', $get[result][count($get[result])-1][message][text]), $a)){}
+//if (preg_match('/ÃÃ°Ã¨Ã¢/', iconv('UTF-8', 'cp1251', $get[result][count($get[result])-1][message][text]), $a)){}
 http("https://api.telegram.org/bot484226037:AAHI3AnWGUdPX0kpUc5iSwpA5HsnB0nfw3s/sendMessage?//disable_web_page_preview=true&chat_id=461970458&text=".word(iconv('UTF-8', 'cp1251', $get[result][count($get[result])-1][message][text])));
 
 ?>
